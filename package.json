@@ -1,9 +1,9 @@
 {
-  "name": "markdown-fenced-codeblock-example-injection",
-  "displayName": "Markdown fenced code block example injection",
+  "name": "nushell-grammar-injection",
+  "displayName": "nushell-grammar-injection",
   "description": "",
-  "version": "0.0.1",
-  "publisher": "bierner",
+  "version": "0.0.2",
+  "publisher": "jamesonknutson",
   "license": "MIT",
   "repository": {
     "url": "https://github.com/mjbvz/vscode-fenced-code-block-grammar-injection-example.git"
@@ -17,22 +17,25 @@
   "categories": [
     "Other"
   ],
+  "scripts": {
+    "package-install": "vsce package && nu installer.nu"
+  },
   "contributes": {
     "languages": [
       {
-        "id": "superjs-injection"
+        "id": "nushell-injection"
       }
     ],
     "grammars": [
       {
-        "language": "superjs-injection",
-        "scopeName": "markdown.superjs.codeblock",
+        "language": "nushell-injection",
+        "scopeName": "markdown.nushell.codeblock",
         "path": "./syntaxes/codeblock.json",
         "injectTo": [
           "text.html.markdown"
         ],
         "embeddedLanguages": {
-          "meta.embedded.block.superjs": "javascript"
+          "meta.embedded.block.nushell": "nushell"
         }
       }
     ]
